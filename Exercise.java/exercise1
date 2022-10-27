@@ -1,0 +1,114 @@
+public class exercise {
+
+    public static void main(String[] args) throws Exception {
+
+ 
+
+        int[][] mdArray = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15 ,16}};
+
+        // PATTERN 1
+        int sum = 0;
+        for (int i = 0; i < mdArray.length; i++) {
+            sum += mdArray[0][i];
+        }
+
+        System.out.println("1. SUM OF PATTERN 1: " + sum);
+
+
+
+        // PATTERN 2
+
+        System.out.println("");
+        int total = 0;
+        for (int i = 0; i < mdArray.length; i++) {
+            total += mdArray[i][0];
+        }
+            
+        System.out.println("2. SUM OF PATTERN 2: " + total);
+
+       
+
+        // PATTERN 3
+
+        System.out.println("");
+
+        int total1 = 0;
+        for (int i = 0; i < mdArray.length; i++) {
+            total1 += mdArray[0][i];
+
+            if (i == 0) {
+                continue;
+            }
+            total1 += mdArray[i][0];
+        }
+
+        System.out.println("3. SUM OF PATTERN 3: " + total1);
+
+       
+
+        // PATTERN 4
+
+        System.out.println("");
+        int sum1 = 0;
+        for (int i = 0; i < mdArray.length; i++) {
+            sum1 += mdArray[0][1];
+
+            if (i == 1) {
+                continue;
+            }
+            if (i == 2) {
+                continue;
+            }
+            sum1 += mdArray[3][0];
+        }
+
+        System.out.println("4. SUM OF PATTERN 4; " + sum1);
+
+        // PATTERN 5
+
+        System.out.println("");
+        int sum2 = 0;
+        for (int i = 0; i < mdArray.length; i++) {
+            sum2 += mdArray[0][1];
+
+            if (i == 0) {
+                continue;
+            }
+            if (i == 3) {
+                continue;
+            }
+            sum2 += mdArray[3][0];
+        }
+
+        System.out.println("5. SUM OF PATTERN 5: " + sum2);
+
+     
+
+        // PATTERN 6
+
+        System.out.println(" ");
+        int sum3 = 0;
+        for (int i = 0; i < mdArray.length; i++) {
+            sum3 += mdArray[3][2];
+
+            if (i == 1) {
+                continue;
+            }
+            if (i == 2) {
+                continue;
+            }
+            if (i == 2) {
+                continue;
+            }
+            if (i == 1) {
+                continue;
+            }
+            sum3 += mdArray[0][3];
+        }
+
+
+        System.out.println("6. SUM OF PATTERN 6: " + sum3);
+
+    }
+
+  }
